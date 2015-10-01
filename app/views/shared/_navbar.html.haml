@@ -1,0 +1,22 @@
+%nav
+  .nav-wrapper
+    .nav-logo
+      = link_to "Chirper", root_path
+.subnav
+  - if user_signed_in?
+    .welcome-message
+      Welcome, 
+      %span.user-name
+        = link_to current_user.username, users_path(current_user)
+    .subnav-buttons
+      = link_to( destroy_user_session_path, method: :delete) do 
+        %button.logout-button.button
+          Log out
+        = link_to new_chirp_path do
+          %button.new-chirp.button
+            Chirp!
+.errors
+  - [:notice, :success, :error, :alert].each do  |level|
+    - unless flash[level].blank?
+      %div{class: "#{flash_class(level)}"}
+        = content_tag :p, flash[level]

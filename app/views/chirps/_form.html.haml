@@ -1,0 +1,14 @@
+%h1.form-header
+  Make yourself heard today!
+.form-wrapper
+  = form_for(@chirp) do |f|
+    .form-group
+    = f.label :content
+    .fomr-group
+    = f.text_area :content, class: "chirp-textarea"
+    %p
+      %span#character-left
+        140
+      character left
+    .form-group
+    = f.submit
