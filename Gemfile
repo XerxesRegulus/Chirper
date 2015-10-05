@@ -9,6 +9,8 @@ gem "carrierwave"
 gem "mini_magick"
 gem "haml-rails"
 gem 'coffee-rails', '~> 4.1.0'
+gem 'active_model_serializers'
+gem 'rack-cors'
 
 gem "ionicons-rails"
 gem "jquery-rails"
