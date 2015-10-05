@@ -2,8 +2,6 @@
 
 This is the rails API backend for Chirper-ember repository
 
-Things you may want to cover:
-
 ===== Version
 
   Ruby 2.2.2
