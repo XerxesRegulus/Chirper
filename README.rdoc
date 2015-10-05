@@ -1,28 +1,50 @@
-== README
+== Chirper Rails API Backend
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the rails API backend for Chirper-ember repository
 
 Things you may want to cover:
 
-* Ruby version
+===== Version
 
-* System dependencies
+  Ruby 2.2.2
+  Rails 4.2.4
+  PostgreSQL 9.4.4
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+===== System Dependencies
+  sass-rails
+  uglifier
+  carrierwave
+  mini_magick
+  haml-rails
+  coffee-rails
+  active_model_serializers
+  rack-cors
+  devise
+  ionicons-rails
+  jquery-rails
+  jquery-turbolinks
+  turbolinks
+  jbuilder
+  sdoc
+  byebug
+  rspec-rails
+  minitest
+  capybara
+  database_cleaner
+  factory_girl_rails
+  web-console
+  spring
+  binding_of_caller
+  better_errors
+  spring-commands-rspec
+  quiet_assets
+  awesome_print
+  ffaker
+  html2haml
+  bullet
+  letter_opener
+  pry
+  
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
