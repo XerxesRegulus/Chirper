@@ -5,6 +5,14 @@ Rails.application.routes.draw do
   root 'home#index'
 
   resources :chirps
+  namespace :api do
+    namespace :v1 do
+      get :csrf, to: 'csrf#index'
+      resources :chirps
+      get "users/:id" => "users#show", as: :users
+
+    end
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

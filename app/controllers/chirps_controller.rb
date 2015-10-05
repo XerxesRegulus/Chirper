@@ -1,5 +1,6 @@
 class ChirpsController < ApplicationController
   before_action :set_chirp, only: [:destroy]
+
   def index
     @chirps = Chirp.all
   end
@@ -10,22 +11,22 @@ class ChirpsController < ApplicationController
 
   def create
     @chirp = Chirp.new chirp_params
-    @chirp.user_id = current_user.id
     if @chirp.save
-      flash[:success] = @chirp.errors.full_messages
       redirect_to chirps_path
-    else
-      flash[:error] = @chirp.errors.full_messages
+      flash[:success] = "Chirp Created Successfully"
+    else 
+      flash[:error] = @chirp.errors.to_sentence
       render :new
     end
   end
 
   def destroy
     if @chirp.destroy
-      flash[:success] = "Deleted"
       redirect_to chirps_path
+      flash[:success] = "Chirp Destroyed Successfully"
     else
-      flash[:error] = @chirps.errors.full_messages.to_sentence
+      flash[:error] = @chirp.errors.to_sentence
+      redirect_to chirps_path
     end
   end 
   private

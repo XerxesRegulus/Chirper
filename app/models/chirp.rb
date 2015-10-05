@@ -1,6 +1,5 @@
 class Chirp < ActiveRecord::Base
   belongs_to :user
-  validates :user_id, :content, presence: true
   validates_length_of :content, maximum: 140, allow_blank: true
 
   before_save :parse_content
@@ -23,4 +22,5 @@ class Chirp < ActiveRecord::Base
     parsed = unparsed.join(' ')
     self.content = parsed
   end
+
 end
