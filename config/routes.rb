@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users,  controllers: {sessions: 'sessions', registrations: 'registrations'}
 
-  get "users/:id" => "users#show", as: :users
+  get "users/:id", to: "users#show", as: :users
   root 'home#index'
 
   resources :chirps
@@ -9,8 +9,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get :csrf, to: 'csrf#index'
       resources :chirps
-      get "users/:id" => "users#show", as: :users
-
+      get "users/:id", to: "users#show", as: :users
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

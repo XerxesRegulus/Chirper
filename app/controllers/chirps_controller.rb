@@ -11,6 +11,7 @@ class ChirpsController < ApplicationController
 
   def create
     @chirp = Chirp.new chirp_params
+    @chirp.user = current_user
     if @chirp.save
       redirect_to chirps_path
       flash[:success] = "Chirp Created Successfully"
