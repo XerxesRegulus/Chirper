@@ -5,7 +5,7 @@
     %p.chirp-content
       = raw chirp.content
     .chirp-username
-      by:
-      - #= link_to chirp.user.username, users_path(chirp.user)
+      / by:
+      -#= link_to chirp.user.username, users_path(chirp.user)
     .chirp-controls    
       = link_to "Delete", chirp_path(chirp), method: 'delete'

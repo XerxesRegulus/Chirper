@@ -1,6 +1,5 @@
-class Api::V1::ChirpsController < ApplicationController
+class Api::V1::ChirpsController < Api::V1::ApplicationController
   respond_to :json
-  skip_before_action :verify_authenticity_token
   
   def index
     respond_with Chirp.all

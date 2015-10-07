@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       get :csrf, to: 'csrf#index'
       resources :chirps
       get "users/:id", to: "users#show", as: :users
+
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
