@@ -1,10 +1,8 @@
 class Api::V1::ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  
   before_action :authenticate_user_from_token!
-
-  # Enter the normal Devise authentication path,
-  # using the token authenticated user if available
   before_action :authenticate_user!
 
   private
