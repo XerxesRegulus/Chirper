@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
 
   has_many :followers
   has_many :followings
-  
+
   before_save :ensure_authentication_token
 
   def ensure_authentication_token
@@ -26,5 +26,5 @@ class User < ActiveRecord::Base
       break token unless User.where(authentication_token: token).first
     end
   end
-  
+
 end
