@@ -14,3 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require ember
+//= require ember-auth
+//= require ember-auth-request-jquery
+//= require ember-auth-response-json
+
+Chirper.Auth = Em.Auth.extend
+  request: 'jquery'
+  
+Chirper.Auth = Em.Auth.extend
+  response: 'json'

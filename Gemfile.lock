@@ -82,6 +82,24 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    ember-auth-rails (5.0.1)
+      ember-auth-source (>= 8.0.0)
+      rails
+    ember-auth-request-jquery-rails (1.0.0)
+      ember-auth-request-jquery-source
+      rails
+    ember-auth-request-jquery-source (1.0.3)
+      ember-auth-source (~> 9.0)
+      ember-source (~> 1.0)
+    ember-auth-response-json-rails (1.0.0)
+      ember-auth-response-json-source
+      rails
+    ember-auth-response-json-source (1.0.2)
+      ember-auth-source (~> 9.0)
+      ember-source (~> 1.0)
+    ember-auth-source (9.0.7)
+      ember-source (>= 1.0.0.rc6.2)
+    ember-source (1.13.10)
     erubis (2.7.0)
     execjs (2.6.0)
     factory_girl (4.5.0)
@@ -250,6 +268,12 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
   devise
+  ember-auth-rails
+  ember-auth-request-jquery-rails
+  ember-auth-request-jquery-source
+  ember-auth-response-json-rails
+  ember-auth-response-json-source
+  ember-auth-source
   factory_girl_rails
   ffaker
   haml-rails
