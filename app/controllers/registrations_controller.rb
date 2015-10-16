@@ -1,15 +1,10 @@
 class RegistrationsController < Devise::RegistrationsController
-  
+  skip_before_action :verify_authenticity_token
+  respond_to :json
   before_action :configure_permitted_parameters
 
   def create
-    @user = User.new sign_up_params
-    if @user.save
-      flash[:success] = "Signed Up Successfully"
-      redirect_to chirps_path
-    else
-      flash[:error] = "Oh noes! something went wrong"
-    end
+    respond_with :api, :v1, User.create(sign_up_params)
   end
 
   private

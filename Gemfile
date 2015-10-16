@@ -12,6 +12,13 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'active_model_serializers'
 gem 'rack-cors'
 
+gem 'ember-auth-rails'
+gem 'ember-auth-source'
+gem 'ember-auth-request-jquery-rails'
+gem 'ember-auth-request-jquery-source'
+gem 'ember-auth-response-json-rails'
+gem 'ember-auth-response-json-source'
+
 gem "ionicons-rails"
 gem "jquery-rails"
 gem 'jquery-turbolinks'
@@ -47,4 +54,3 @@ group :development do
   gem "letter_opener"
   gem "pry"
 end
-
