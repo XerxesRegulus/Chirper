@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get :csrf, to: 'csrf#index'
-      resources :chirps
+      resources :chirps do
+        resources :followers
+        resources :followings
+      end
       devise_for :users,  controllers: {sessions: 'sessions', registrations: "registrations"}
       resources :users
     end

@@ -23,20 +23,6 @@ ActiveRecord::Schema.define(version: 20151020084901) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "followers", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "follower_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  create_table "followings", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "following_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
   create_table "notification", force: :cascade do |t|
     t.string   "notification_type"
     t.integer  "chirp_id"
