@@ -8,9 +8,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   has_many :chirps
 
-  has_many :followers, class_name: "Relationship", foreign_key: "follower_id", dependent: :destroy
-  has_many :followings, class_name: "Relationship", foreign_key: "following_id", dependent: :destroy
-
+  has_many :followers
+  has_many :followings
   before_save :ensure_authentication_token
 
   def ensure_authentication_token
