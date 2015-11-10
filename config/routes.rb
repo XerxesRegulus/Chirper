@@ -8,12 +8,11 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get :csrf, to: 'csrf#index'
-      resources :chirps do
-        resources :followers
-        resources :followings
-      end
-      devise_for :users,  controllers: {sessions: 'sessions', registrations: "registrations"}
+      resources :chirps
       resources :users
+      resources :followings
+      resources :followers
+      resources :relationships
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

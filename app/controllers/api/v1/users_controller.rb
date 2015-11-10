@@ -1,6 +1,9 @@
 class Api::V1::UsersController < Api::V1::ApplicationController
   respond_to :json
-  skip_before_action :verify_authenticity_token
+
+  def index
+    respond_with User.all
+  end
 
   def show
     respond_with user
@@ -14,7 +17,7 @@ class Api::V1::UsersController < Api::V1::ApplicationController
       respond_with user
     end
   end
-
+  
   private
   def user
     User.find(params[:id])
