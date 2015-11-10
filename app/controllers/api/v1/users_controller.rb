@@ -17,10 +17,6 @@ class Api::V1::UsersController < Api::V1::ApplicationController
       respond_with user
     end
   end
-
-  def followers
-    respond_with @user.followers
-  end
   
   private
   def user

@@ -8,8 +8,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true
   has_many :chirps
 
-  has_many :followers
-  has_many :followings
+  has_many :followers, dependent: :destroy
+  has_many :followings, dependent: :destroy
   before_save :ensure_authentication_token
 
   def ensure_authentication_token
