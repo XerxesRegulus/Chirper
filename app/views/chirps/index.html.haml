@@ -1,5 +1,5 @@
-%h1 
-  Chirp index
+%h1
+  HAHA JP WAS HERE
 - @chirps.each do |chirp|
   .chirp-card
     %p.chirp-content
@@ -7,5 +7,5 @@
     .chirp-username
       / by:
       -#= link_to chirp.user.username, users_path(chirp.user)
-    .chirp-controls    
+    .chirp-controls
       = link_to "Delete", chirp_path(chirp), method: 'delete'
